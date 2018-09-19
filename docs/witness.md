@@ -1,0 +1,174 @@
+# Smoke Network Witnessuting Setup
+
+Note 1:  Requires running  Ubuntu 16.04.4 LTS (Xenial Xerus)
+
+Note 2:  This document will use  ``$``   as the command prompt indicator and  `user`  for your username. Please use your correct username in place of  `user`.
+
+Note 3:  Some single line commands are quite long and wrap in this document. Make sure they are entered into the terminal window as a single line command. You may need to copy to a local editor first.
+
+## Witness server install
+1 - Open a terminal window and remotely log into your server. Navigate to your home directory.
+
+``` cd /home/ user ```
+
+2 - Create a directory called smoke.
+
+``` mkdir smoke ```
+
+3 - Change to the smoke directory.
+
+``` cd smoke ```
+
+4 - Get updates.
+
+``` apt-get update ```
+
+5 - Install packages
+
+``` apt-get -y install wget nano screen jq ```
+
+6 - Download files.
+
+```wget https://github.com/smokenetwork/smoked/releases/download/v0.0.4/smoked-0 .0.4-x86_64-linux.tar.gz
+ wget https://github.com/smokenetwork/smoked/releases/download/v0.0.4/cli_wall et-0.0.4-x86_64-linux.tar.gz```
+
+7 - Uncompress files.
+
+```tar -xzf smoked-0.0.4-x86_64-linux.tar.gz
+ tar -xzf cli_wallet-0.0.4-x86_64-linux.tar.gz```
+
+8 - Remove compressed files.
+
+``` rm *.gz ```
+
+9 - Create p2p private key by starting the witness twice.
+
+``` ./smoked ```
+
+10 - Press  control-C  (mac) or  Ctrl-C  (windows) to stop the witness.
+
+11 - Start witness again.
+
+```  ./smoked ```
+
+12 - Press  control-C  (mac) or  Ctrl-C  (windows) to stop the witness.
+
+13 - Verify that  witness_node_data_dir/p2p/node_config.json  file was created. If not, start and
+stop the witness again.
+
+14 - Replace default p2p key in  config.ini  with your p2p key.  **NOTE:  This is a single line
+command.**
+
+```sed -i s/\"0000000000000000000000000000000000000000000000000000000000000000\"/$(jq .private_key witness_node_data_dir/p2p/node_config.json)/g witness_node_data_dir/config.ini```
+
+15 - Update  config.ini  with seed nodes.
+
+```  nano /home/ user/  smoke/witness_node_data_dir/config.ini ```
+
+16 - Find  #seed-node =  and replace with:
+
+```seed-node = 163.172.128.38:2001
+ seed-node = 51.15.95.123:2001```
+
+17 - Create a detachable session and start the witness.
+
+```screen -S smoked
+ cd /home/user/smoke
+ ./smoked```
+
+18 - Detach session but leave witness running by pressing  control-A-D  (mac) or  Ctrl-A-D (windows).
+
+---
+
+## Client wallet configuration
+
+1 - Create a detachable session for wallet.
+
+```screen -S wallet```
+
+2 - Navigate to smoke directory.
+
+```cd /home/ user /smoke```
+
+3 - Start the wallet.
+
+``` ./cli_wallet ```
+
+4 - Set wallet password. Use a unique secure password.  **SAVE THESE IN A SAFE PLACE!**
+
+new >>>  ``` set_password  secure_password```
+
+5 - Unlock the wallet.
+
+locked >>>  ```unlock  secure_password```
+
+6 - Get your smoke.io keys.  Note:  You will need your smoke.io account name & password. All inputs in quotes.
+
+unlocked >>>  ```get_private_key_from_password "account name" "active" "original_key"```
+
+7 - This will return 2 keys. The 1st is your Public Active Key and the 2nd is your Private Active Key.
+
+8 - Import Private Active Key. The ‘ private_active_key ’ is the 2nd key received from the previous step.  **No quotes!**
+
+unlock >>>  ```import_key  private_active_key```
+
+9 - Get brain keys1. (optional step but recommended)
+
+unlock >>>  ```suggest_brain_key```
+
+10 - This will generate 3 keys.  **SAVE THESE IN A SAFE PLACE!**
+
+- brain_priv_key
+- wif_priv_key
+- pub_key
+
+11 - Import ‘wif_priv_key’ into the wallet.  **No quotes!**
+
+unlock >>>  ```import_key  wif_priv_key```
+
+12 - Detach session but leave wallet running by pressing  control-A-D  (mac) or  Ctrl-A-D  (windows).
+
+13 - Update config.ini with ‘wif_priv_key’.
+
+```nano /home/ user/  smoke/witness_node_data_dir/config.ini```
+
+14 -  Locate the  ‘#witness =’  line
+
+- Uncomment the line by removing the ‘#’ at the beginning. - Add smoke.io account name in quotes.
+
+```witness = " account_name"```
+
+15 - Locate the ‘#private-key =’ line
+
+- Uncomment the line by removing the ‘#’ at the beginning.
+- Add the ‘wif_priv_key’ or if you did not create brain key you will use the ‘private_active_key’ that was previously imported into the cli_wallet.  **No quotes!**
+
+```private-key =  wif_priv_key```
+
+16 - Save updates and exit by pressing  Control-X  (mac) or  Ctrl-X  (windows), then  Y,  then  return (mac) or  Enter  (windows).
+
+17 - Switch to witness session to invoke updates.
+
+```screen -r smoked```
+
+18 - Stop witness by pressing  control-c  (mac) or  Ctrl-C  (windows).
+
+19 - Restart witness to pick up changes.
+
+``` ./smoked ```
+
+20 - Detach session but leave witness running by pressing  control-A-D  (mac) or  Ctrl-A-D (windows).
+
+21 - Switch to wallet session for witness update.
+
+```screen -r wallet```
+
+22 - Send update for witness, all inputs in quotes. The ‘ witness_url’  will be used for the link in the witness voting list. It can be left blank, but the url of your witness testimonial is often used. The ‘ pub_key’  is from the brain keys you saved in a safe place earlier or if you did not create brain keys you will use the Public Active Key returned in step 6 .
+
+unlock >>>  ```update_witness " account_name"  " witness_url"  " pub_key"  {} true```
+
+---
+
+Go to  https://smoke.io/~witnesses  and vote for yourself as a witness.
+
+Make an announcement post and engage the community for voting support to make it into the top 21.
