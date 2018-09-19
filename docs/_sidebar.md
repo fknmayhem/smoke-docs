@@ -2,7 +2,7 @@
 
 * Introducing Smoke
 
-  * [What is Smoke.Network?](whatissmokenetwork.md)
+  * [What is Smoke.Network?](/)
   * [What is Smoke.io?](whatissmokeio.md)
   * [What makes SMOKE coin different?](smokecoindifferent.md)
 
@@ -28,5 +28,4 @@
 ---
 
 * [Block Explorer](https://explore.smoke.io)
-* [About Smoke Network](https://smoke.network)
-* [Smoke Whitepaper](https://smoke.network/Smoke-Whitepaper-2.0.pdf)
+* [Smoke Network Homepage](https://smoke.network)
