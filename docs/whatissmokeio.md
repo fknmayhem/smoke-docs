@@ -4,6 +4,7 @@
 
 ### MVP Features
 
+
 Our first front-end Minimum Viable Product (MVP) DApp launched on the Smoke blockchain is the [Smoke.io](https://smoke.io/) DApp. It contains the core social media networking features and will demonstrate the ability to browse, upvote, and get paid for contributions on the network into the onsite wallet.
 
 [Smoke.io](https://smoke.io/) functions like a regular website, but it is actually a DApp (Decentralized App) powered by the open source Smoke Network blockchain. Community developers are freely able to build their own DApps running off of the Smoke Network blockchain.

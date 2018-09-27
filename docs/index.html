@@ -25,16 +25,19 @@
   <meta name="og:url" content="https://docs.smoke.io/">
   <meta name="og:site_name" content="Smoke Network Docs">
   <meta name="og:type" content="website">
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="/_media/favicon.ico" type="image/x-icon"/>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 </head>
 <body>
   <nav>
+
    <a href="https://smoke.io">Back to Smoke.io</a>
 
  </nav>
-  <div id="app"></div>
+
+  <div id="app">
+  </div>
   <script>
     window.$docsify = {
       name: '',
@@ -42,10 +45,13 @@
       logo: '/_media/smoke.svg',
       loadSidebar: true,
       search: 'auto',
-      themeColor: '#00c300'
+      themeColor: '#00c300',
+      executeScript: true
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/external-script.min.js"></script>
+
 </body>
 </html>

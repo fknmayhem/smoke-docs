@@ -1,8 +1,13 @@
+
+
 <img style="max-width:200px; margin-left:15px" src='/_media/smoke.svg' /><span>Docs</span>
+
+
+
 
 * Introducing Smoke
 
-  * [What is Smoke.Network?](/)
+  * [What is Smoke.Network?](whatissmokenetwork.md)
   * [What is Smoke.io?](whatissmokeio.md)
   * [What makes SMOKE coin different?](smokecoindifferent.md)
 
@@ -11,6 +16,7 @@
   * [Accounts](accounts.md)
   * [Using Smoke.io](usingsmokeio.md)
   * [Content Guidelines](contentguidelines.md)
+  * [Smoke.io Ambassador Programme](ambassadorprogramme.md)
 
 * Claiming Coins
 
