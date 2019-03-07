@@ -9,3 +9,5 @@ It is a utility coin that allows access to the network and is the backbone that 
 The first Smoke Network DApp, [Smoke.io](https://smoke.io/), provides world class social networking features combined with the ability to earn rewards from content. A first for the global cannabis community.
 
 For information please read our full [whitepaper](https://smoke.network/Smoke-Whitepaper-2.0.pdf) or [roadmap](https://smoke.network/roadmap) to see upcoming features.
+
+![Smoke.io Dapp](./_media/smoke3.gif "")

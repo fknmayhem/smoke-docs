@@ -68,11 +68,10 @@ Avoid posting offensive content on Smoke Network including the following:
 
 -   Thin posts that are avoid of relevant or substantial content
 
+-   Fraud or Plagiarism
+
 -   Posts inciting violence or hatred
 
 -   Posts with excessive nudity or gore
-
--   Posts that are pornographic in nature
-
 
 Content like the above could be flagged and hidden due to excessive downvotes by the community and will cause your account to lose credibility.

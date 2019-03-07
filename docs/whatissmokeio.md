@@ -11,5 +11,6 @@ Our first front-end Minimum Viable Product (MVP) DApp launched on the Smoke bloc
 
 Features of the Smoke.io DApp include a streamlined user sign up page, a customizable home page feed filterable by content type, an explore page for finding and curating new content on the fly, a wallet page for managing SMOKE earned and processing withdrawals, deposits and staking, a profile page for viewing and editing profile information, as well as a basic settings page to customize your experience on the network.
 
+![Smoke.io Dapp](./_media/smoke1.gif "")
 
 Visit [Smoke.io](https://smoke.io/) to find out more.

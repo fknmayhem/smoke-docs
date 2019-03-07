@@ -9,3 +9,5 @@ If you purchased or hold SMOKE UIA tokens on the Bitshares DEX please follow the
 ---
 
 *Make sure you use the correct memo and send your coins to the correct bitshares address.*
+
+![Smoke.io Dapp](./_media/smoke5.gif "")

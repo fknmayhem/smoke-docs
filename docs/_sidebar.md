@@ -8,6 +8,7 @@
 * Introducing Smoke
 
   * [What is Smoke.Network?](whatissmokenetwork.md)
+  * [What is the Smoke Blockchain?](whatissmokeblockchain.md)
   * [What is Smoke.io?](whatissmokeio.md)
   * [What makes SMOKE coin different?](smokecoindifferent.md)
 
@@ -16,7 +17,9 @@
   * [Accounts](accounts.md)
   * [Using Smoke.io](usingsmokeio.md)
   * [Content Guidelines](contentguidelines.md)
-  * [Smoke.io Ambassador Programme](ambassadorprogramme.md)
+  * [Curation Guidelines](curationguidelines.md)
+  * [Cannasseur Programme](cannasseurprogramme.md)
+  * [Tools / DApps](tools.md)
 
 * Claiming Coins
 
@@ -29,6 +32,8 @@
   * [REST API <sup style="color:red">(coming soon)<sup>](restapi.md)
   * [Running a Node](node.md)
   * [Setting up a Witness](witness.md)
+  * [Smoked RPC API Calls](smokedrpcapi.md)
+  * [Setting up an exchange](exchange.md)
   * [Contributing](contributing.md)
 
 ---

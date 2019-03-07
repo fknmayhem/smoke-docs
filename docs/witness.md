@@ -29,13 +29,13 @@ Note 3:  Some single line commands are quite long and wrap in this document. Mak
 
 6 - Download files. *Check for the latest versions [here](https://github.com/smokenetwork/smoked/releases)*
 
-```wget https://github.com/smokenetwork/smoked/releases/download/v0.0.5/smoked-0.0.5-x86_64-linux.tar.gz
- wget https://github.com/smokenetwork/smoked/releases/download/v0.0.5/cli_wallet-0.0.5-x86_64-linux.tar.gz```
+```wget https://github.com/smokenetwork/smoked/releases/download/v0.0.6/smoked_lm-0.0.6-x86_64-linux.tar.gz
+ wget https://github.com/smokenetwork/smoked/releases/download/v0.0.6/cli_wallet-0.0.6-x86_64-linux.tar.gz```
 
 7 - Uncompress files.
 
-```tar -xzf smoked-0.0.5-x86_64-linux.tar.gz
- tar -xzf cli_wallet-0.0.5-x86_64-linux.tar.gz```
+```tar -xzf smoked_lm-0.0.6-x86_64-linux.tar.gz
+ tar -xzf cli_wallet-0.0.6-x86_64-linux.tar.gz```
 
 8 - Remove compressed files.
 
@@ -49,24 +49,30 @@ Note 3:  Some single line commands are quite long and wrap in this document. Mak
 
 10 - Update  config.ini  with seed nodes.
 
-```  nano /home/ user/  smoke/witness_node_data_dir/config.ini ```
+```  nano witness_node_data_dir/config.ini ```
 
-11 - Find  #seed-node =  and replace with:
+11 - Find shared-file-size = 1G and change :
+   ```shared-file-size = 8G```
+
+12 - Find  #seed-node =  and replace with:
 
 ```seed-node = 51.15.223.10:2001
- seed-node = 51.15.120.228:2001```
+ seed-node = 51.15.120.228:2001
+ seed-node = 163.172.128.38:2001
+seed-node = 51.15.95.123:2001```
 
-12 - Find #rpc endpoint = , remove ```#``` and enter the value:
+13 - Find #rpc endpoint = , remove ```#``` and enter the value:
 
-``` 51.158.79.144:8090 ```
+``` 127.0.0.1:8090 ```
 
-13 - Create a detachable session and start the witness.
+
+14 - Create a detachable session and start the witness.
 
 ```screen -S smoked
  cd /home/user/smoke
  ./smoked```
 
-14 - Detach session but leave witness running by pressing  control-A-D  (mac) or  Ctrl-A-D (windows).
+15 - Detach session but leave witness running by pressing  control-A-D  (mac) or  Ctrl-A-D (windows).
 
 ---
 
@@ -82,7 +88,7 @@ Note 3:  Some single line commands are quite long and wrap in this document. Mak
 
 3 - Start the wallet.
 
-``` ./cli_wallet -s ws://51:158.79.144:8090 ```
+``` ./cli_wallet -s https://rpc.smoke.io ```
 
 4 - Set wallet password. Use a unique secure password.  **SAVE THESE IN A SAFE PLACE!**
 

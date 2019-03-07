@@ -2,6 +2,8 @@
 
 Smoke.Network is a blockchain built for the social networking needs of the cannabis community. It rewards users in cryptocurrency for creating and curating high-quality content, including images, articles, cannabis strain and dispensary reviews. SMOKE is the cryptocurrency that users receive as rewards.
 
+<iframe width="760" height="415" src="https://www.youtube.com/embed/BC1jtxQGux8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Users can:  
 
 - Post stories on the network stored on the blockchain.
@@ -10,13 +12,17 @@ Users can:
 
 Smoke Network is a project based on the profound potential of blockchain technology to transform the way we interact online. Building on the technology laid out by Bitcoin, Steem and EOS it allows for content creators to earn real world rewards for their contribution to the network.
 
-To learn more read our [about page](https://smoke.network), [pitch deck](https://smoke.network/Smoke-Pitch-Deck.pdf) or [whitepaper](https://smoke.network/Smoke-Whitepaper-2.0.pdf).
+To learn more read our [pitch deck](https://smoke.network/Smoke-Pitch-Deck.pdf) or [whitepaper](https://smoke.network/Smoke-Whitepaper-2.0.pdf) or find out more about [the Smoke blockchain](whatissmokeblockchain.md).
 
 ---
 
 **Excited?**
 
 Join our first minimal viable product (MVP), [Smoke.io](https://smoke.io/).
+
+![Smoke.io Dapp](./_media/smoke1.gif "")
+
+
 
 Smoke.io is a beta version of the Smoke Network DApp running live off the Smoke Network blockchain.
 
