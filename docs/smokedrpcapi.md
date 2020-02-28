@@ -6,7 +6,7 @@ This page lists various API calls for the smoked binary which acts as a backbone
 
 ## Before Attempting smoked RPC Calls
 
-In order to access smoked calls you MUST have a full node running and listening to port 8092, on a local machine (or other server you have access to) or use the official https://rpc.smoke.io node.
+In order to access smoked calls you MUST have a full node running and listening to port 8092, on a local machine (or other server you have access to) or use the official https://pubrpc.smoke.io node.
 
 ### Call Format for smoked
 
