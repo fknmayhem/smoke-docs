@@ -36,7 +36,7 @@ In the example above the "get_accounts" function calls to the database_api modul
 
 A simple way to pass command to the same command to the smoked client is by with curl using the following format:
 
-``` curl --data '{"jsonrpc": "2.0", "method": "get_accounts", "params": [["smoke"]], "id": 1 }' https://rpc.smoke.io ```
+``` curl --data '{"jsonrpc": "2.0", "method": "get_accounts", "params": [["smoke"]], "id": 1 }' https://pubrpc.smoke.io ```
 
 ## Calls That Are a Success
 
